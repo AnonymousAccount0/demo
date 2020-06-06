@@ -281,7 +281,7 @@ function fitModelKin() {
 		isFittingKin = true;
 		var startDate = new Date();
 		trainWann(wann, weightsPredictor, task, discrepancer,
-		epochs, batchSize, xSource, ySource, xTarget, yTarget, "Kin", true).then(() => {
+		epochs, batchSize, xSource, ySource, xTarget, yTarget, "Kin", undefined, true).then(() => {
 		isFittingKin = false;
 		var endDate = new Date();
 		document.getElementById("timeKin").innerText = "Time \n" + ((endDate.getTime() - startDate.getTime()) / 1000).toFixed(1);
@@ -483,7 +483,7 @@ function fitModelUCI() {
 		isFittingUCI = true;
 		var startDate = new Date();
 		trainWann(wann, weightsPredictor, task, discrepancer,
-		epochs, batchSize, xSource, ySource, xTarget, yTarget, "UCI", true).then(() => {
+		epochs, batchSize, xSource, ySource, xTarget, yTarget, "UCI", undefined, true).then(() => {
 		isFittingUCI = false;
 		var endDate = new Date();
 		document.getElementById("timeUCI").innerText = "Time \n" + ((endDate.getTime() - startDate.getTime()) / 1000).toFixed(1);
